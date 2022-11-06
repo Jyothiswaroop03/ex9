@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script>
+        var app = angular.module('myapp', ['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider.when('/login', {
+                templateUrl: 'login.html'
+            })
+            .when('/register', {
+                templateUrl: 'register.html'
+            })
+            .when('/about', {
+                templateUrl: 'about.html'
+            })
+            .when('/contact', {
+                templateUrl: 'contact.html'
+            })
+        });
+    </script>
+</head>
+<body ng-app="myapp">
+    <h1><center>student dashboard</center></h1>
+    <hr>
+    <div class="sidebar">
+        <a href="C:\Z fuck you\5 sem\web technology\ex9\login.html">personal details</a>
+        <a href="C:\Z fuck you\5 sem\web technology\ex9\register.html">Sign Up</a>
+        <a href="C:\Z fuck you\5 sem\web technology\ex9\contact.html">Contact details</a>
+        <a href="C:\Z fuck you\5 sem\web technology\ex9\about.html">About Us</a>
+    </div>
+    <div class="content" ng-view>
+
+    </div>
+</body>
+</html>
